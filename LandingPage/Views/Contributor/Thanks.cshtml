@@ -1,0 +1,25 @@
+﻿@model LandingPage.Models.ContributorViewModel
+
+@{
+    ViewBag.Title = "Thanks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.Content.FirstOrDefault(r => r.Key == "PageTitle").Value</h1>
+<h2>@Model.Content.FirstOrDefault(r => r.Key == "PageDescription").Value</h2>
+
+<ul>
+    @foreach (var item in @Model.Content.Where(r => r.Key == "motivator"))
+    {
+        <li>@item.Value</li>
+    }
+</ul>
+
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="col-md-10">
+            @Model.Content.FirstOrDefault(r => r.Key == "ThanksMsg").Value
+        </div>
+    </div>
+</div>
