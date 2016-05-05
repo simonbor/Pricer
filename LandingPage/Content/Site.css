@@ -1,4 +1,11 @@
 ﻿body {
+    background-color: #fff;
+    color: #555;
+    text-shadow: none;
+    margin: 0px; 
+    padding: 0px; 
+    text-decoration: none; 
+    direction: ltr;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -6,8 +13,64 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
+ul,
 input,
 select,
 textarea {
+    padding: 0px;
+}
+.clear { 
+    clear: both; 
 }
 
+ul li{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    text-align: left;
+}
+.site-wrapper {
+    padding: 10px;
+    display: block;
+    width: auto; 
+    height: 100%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    border: solid 0px red;
+}
+.site-wrapper-inner {
+    display: block;
+    padding-top: 60px;
+}
+.cover-container {
+    width: 716px;
+    height: 400px;
+    margin: 0 auto;
+}
+.cover-container-iphone {
+  width: 216px;
+  height: 400px;
+  float: left;
+}
+.cover-container-text {
+  width: 500px;
+  height: 400px;
+  float: left;
+}
+.col-md-10 {
+    margin-top: 30px;
+    padding: 0px;
+    width: auto;
+}
+.col-md-10 input,
+.col-md-10 input:hover  {
+    float:left;
+    border-color: #ccc;
+}
+.col-md-10 input[type=email] {
+    width: 350px !important;
+}
+.motivator {
+    margin-top: 30px;
+}

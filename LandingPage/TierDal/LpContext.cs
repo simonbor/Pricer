@@ -26,7 +26,7 @@ namespace LandingPage.TierDal
         public IQueryable<Content> GetContent(string cultureName, Cache cache)
         {
             LpContext db = new LpContext();
-            string key = "db_cache";
+            string key = "db_cache_" + cultureName;
             var content = (IQueryable<Content>)cache[key];
 
             if (content == null)

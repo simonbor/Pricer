@@ -5,14 +5,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="@Model.Content.FirstOrDefault(r => r.Key== "CeoKeywords").Value"/>
-    <meta name="description" content="@Model.Content.FirstOrDefault(r => r.Key== "CeoDescription").Value"/>
-    <title>@Model.Content.FirstOrDefault(r => r.Key== "CeoTitle").Value</title>
+    <meta name="keywords" content="@Model.Content.FirstOrDefault(r => r.Key== "CeoKeywords").Value" />
+    <meta name="description" content="@Model.Content.FirstOrDefault(r => r.Key== "CeoDescription").Value" />
+    <title>@Model.Content.FirstOrDefault(r => r.Key == "CeoTitle").Value</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/cover.css" rel="stylesheet">
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div class="body-content">
+    <div class="site-wrapper">
         @RenderBody()
     </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

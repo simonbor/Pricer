@@ -5,32 +5,37 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@Model.Content.FirstOrDefault(r => r.Key== "PageTitle").Value</h1>
-<h2>@Model.Content.FirstOrDefault(r => r.Key == "PageDescription").Value</h2>
-
-<ul>
-    @foreach (var item in @Model.Content.Where(r => r.Key == "Motivator"))
-    {
-        <li>@item.Value</li>
-    }
-</ul>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Contributor.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Contributor.Email, "", new { @class = "text-danger" })
+<div class="site-wrapper-inner">
+    <div class="cover-container">
+        <div class="cover-container-iphone">
+            <div class="iphone">
+                <img src="~/images/dreamstime_s_47176018.jpg" height="400" width="216" />
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-default" />
+        <div class="cover-container-text">
+            <div class="inner cover">
+                <h1>@Model.Content.FirstOrDefault(r => r.Key == "PageTitle").Value</h1>
+                <h2>@Model.Content.FirstOrDefault(r => r.Key == "PageDescription").Value</h2>
+
+                <ul class="motivator">
+                    @foreach (var item in @Model.Content.Where(r => r.Key == "Motivator"))
+                    {
+                        <li>@item.Value</li>
+                    }
+                </ul>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Contributor.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Contributor.Email, "", new { @class = "text-danger" })
+                        <input type="submit" class="btn btn-default" />
+                    </div>
+                }
             </div>
         </div>
     </div>
-}
+</div>
