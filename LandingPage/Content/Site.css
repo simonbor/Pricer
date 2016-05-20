@@ -68,7 +68,14 @@ ul li{
     float:left;
     border-color: #ccc;
 }
+.col-md-10 input[type=text]{
+    width: 150px !important;
+    
+    display: none;
+}
 .col-md-10 input[type=email] {
+    width: 200px !important;
+    
     width: 350px !important;
 }
 .motivator {

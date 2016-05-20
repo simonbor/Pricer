@@ -51,9 +51,13 @@ namespace LandingPage.Controllers
             // register the new contributor
             if (ModelState.IsValid)
             {
-                _db.Contributors.Add(contributorViewModel.Contributor);
-                _db.SaveChanges();
-                contributorSubmitter.SubmitOrder(contributor, _db.Contributors.ToList());
+                try
+                {
+                    _db.Contributors.Add(contributorViewModel.Contributor);
+                    _db.SaveChanges();
+                    contributorSubmitter.SubmitOrder(contributor, _db.Contributors.ToList());
+                }
+                catch {}
             }
 
             return View("Thanks", contributorViewModel);
