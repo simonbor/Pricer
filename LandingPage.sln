@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandingPage", "LandingPage\LandingPage.csproj", "{3BFF90BA-AC1E-408A-B583-0DB9A8862EA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandingPage.Web", "LandingPage\LandingPage.Web.csproj", "{3BFF90BA-AC1E-408A-B583-0DB9A8862EA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
